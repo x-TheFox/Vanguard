@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@edenvanguard/shared": "*",
-    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
     "nats": "^2.28.0",
-    "drizzle-orm": "^0.38.0",
+    "drizzle-orm": "^0.45.4",
     "drizzle-kit": "^0.30.0",
     "pg": "^8.13.0",
     "yaml": "^2.6.0"
