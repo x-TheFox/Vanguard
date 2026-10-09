@@ -1,0 +1,26 @@
+{
+  "name": "@edenvanguard/vanguard",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "test": "node --test dist/tests/*.test.js",
+    "start": "node dist/index.js",
+    "dev": "node --watch dist/index.js",
+    "register": "node dist/gateway/registerCommands.js"
+  },
+  "dependencies": {
+    "@edenvanguard/shared": "*",
+    "discord.js": "^14.16.0",
+    "nats": "^2.28.0",
+    "drizzle-orm": "^0.38.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "typescript": "^5.7.0"
+  }
+}
