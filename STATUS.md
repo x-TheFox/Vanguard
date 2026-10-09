@@ -25,7 +25,7 @@
 | Vanguard detection (crashDetector, forumWatcher, pasteLinkExtractor) | done | `vanguard/src/detection/*` |
 | Vanguard UI flows (buttons, checkbox builder, modals) + NATS IPC + Drizzle client | done | `vanguard/src/{ui,ipc,db}` |
 | PostgreSQL schema (9 Aegis tables + 1 MCP-server table) + Drizzle migration 0000 | done | `aegis/src/db/schema.ts`, `infra/db/migrations/` |
-| Unit tests: **111 across 4 workspaces** (shared 24, pterodactyl-mcp 26, aegis 45, vanguard 16) | done | `*/src/tests/*.test.ts` |
+| Unit tests: **116 across 4 workspaces** (shared 24, pterodactyl-mcp 26, aegis 45, vanguard 21) | done | `*/src/tests/*.test.ts` |
 | CI (GitHub Actions: install → build → typecheck → test) | done | `.github/workflows/ci.yml` |
 
 ## What is NOT implemented (honest deltas vs blueprint docs)
@@ -48,5 +48,5 @@
 - `npm ci` clean install
 - `npm run build` (root, workspace dependency order) — exit 0
 - `npx tsc --noEmit` per workspace (shared, pterodactyl-mcp, vanguard, aegis) — 0 errors
-- `npm test` — 111/111 passing (pure unit tests; no live services required)
+- `npm test` — 116/116 passing (pure unit tests; no live services required)
 - `infra/docker/docker-compose.yml` — structurally valid (postgres 17-alpine + nats 2-alpine with healthchecks)

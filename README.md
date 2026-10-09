@@ -4,7 +4,7 @@
 
 EdenVanguard watches Discord support channels for Minecraft server crashes, diagnoses them with an LLM-driven agent loop, and executes safe remediation against Pterodactyl-managed game servers — with human approval gates on every destructive action.
 
-![status](https://img.shields.io/badge/build-typecheck--clean-brightgreen) ![tests](https://img.shields.io/badge/tests-111%2F111%20passing-brightgreen) ![node](https://img.shields.io/badge/node-%E2%89%A522-blue)
+![status](https://img.shields.io/badge/build-typecheck--clean-brightgreen) ![tests](https://img.shields.io/badge/tests-116%2F116%20passing-brightgreen) ![node](https://img.shields.io/badge/node-%E2%89%A522-blue)
 
 ![EdenVanguard architecture](docs/architecture.png)
 
@@ -120,7 +120,7 @@ LLM keys (Groq) and Pterodactyl tokens (`ptla_`/`ptlc_`) are **not** environment
 |---|---|
 | `npm run build` | Emit all workspaces in dependency order |
 | `npm run typecheck` | `tsc --noEmit` across all workspaces |
-| `npm test` | Unit tests via `node --test` (111 tests, no live services needed) |
+| `npm test` | Unit tests via `node --test` (116 tests, no live services needed) |
 | `npm run lint` / `npm run format` | ESLint / Prettier |
 | `npm run db:migrate` | Apply the Drizzle migration |
 | `npm run docker:up` / `docker:down` | Start/stop PostgreSQL + NATS compose stack |
@@ -131,7 +131,7 @@ PostgreSQL with Drizzle ORM — 10 tables: `api_keys`, `audit_log`, `maintenance
 
 ## Project status
 
-See [STATUS.md](STATUS.md) for the full implemented/not-implemented matrix. Short version: all core subsystems are implemented and unit-tested (111/111 green, typecheck-clean, CI wired). **Not** implemented: container-isolated sandboxing (current sandbox is `child_process` + `ulimit`/timeout hardening), patch-export/rollback tooling (phase 10), integration/e2e suites. Nothing in this repository should be described as production-deployed; it is completed, compile- and test-verified code.
+See [STATUS.md](STATUS.md) for the full implemented/not-implemented matrix. Short version: all core subsystems are implemented and unit-tested (116/116 green, typecheck-clean, CI wired). **Not** implemented: container-isolated sandboxing (current sandbox is `child_process` + `ulimit`/timeout hardening), patch-export/rollback tooling (phase 10), integration/e2e suites. Nothing in this repository should be described as production-deployed; it is completed, compile- and test-verified code.
 
 ## License / provenance
 
