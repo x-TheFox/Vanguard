@@ -1,0 +1,39 @@
+{
+  "name": "edenvanguard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Decentralized autonomous agent system with Vanguard (Discord) and Aegis (intelligence core)",
+  "workspaces": [
+    "shared",
+    "pterodactyl-mcp",
+    "vanguard",
+    "aegis"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:shared": "npm run build -w shared",
+    "build:ptero-mcp": "npm run build -w pterodactyl-mcp",
+    "build:vanguard": "npm run build -w vanguard",
+    "build:aegis": "npm run build -w aegis",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run test --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "db:migrate": "npm run db:migrate -w aegis",
+    "docker:up": "docker compose -f infra/docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f infra/docker/docker-compose.yml down"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "prettier": "^3.4.0",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
